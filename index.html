@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Track Suggestrotron-Epicodus</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Track Suggestotron for Epicodus</h1>
+      <p>Click a radio button to say how much you identify with each statement, and we'll suggest a course track at Epicodus that might interest you!</p>
+      <form>
+        <div id="nameBox" class="form-group">
+          <label for="nameInput">Name:</label>
+          <input id="nameInput" class="form-control" type="text" aria-describedby="nameHelp">
+          <span id="nameHelp" class="help-block"></span>
+        </div>
+        <div class="form-group">
+          <label for="color">What is your favorite color?</label>
+          <input id="color" class="form-control" type="color">
+        </div>
+        <!--Question 1-->
+        <p>Do you enjoy making visual art, such as painting, drawing, or collage?</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question1" value="1" checked>
+          Yes, very much!
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question1" value="1">
+            Yes, somewhat.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question1" value="0">
+            Only a little.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question1" value="0">
+            Not really.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question1" value="0">
+            Not at all!
+          </label>
+        </div>
+        <br></br>
+      <!--Question 2-->
+        <p>Do you like large, complex projects with many different parts? (e.g. editing, layout, managing teams)</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question2" value="1" checked>
+          Yes, very much!
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question2" value="1">
+            Yes, somewhat.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question2" value="0">
+            Only a little.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question2" value="0">
+            Not really.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question2" value="0">
+            Not at all!
+          </label>
+        </div>
+        <br></br>
+        <!--Question 3-->
+          <p>What is more important to you about your work?</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question3" value="3" checked>
+            Doing things the most efficient way.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question3" value="2">
+            Doing things in a creative way.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question3" value="1">
+            Getting it done fast!
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question3" value="0">
+            Building something beautiful.
+          </label>
+        </div>
+        <br></br>
+        <!--Question 4-->
+          <p>Which OS do you prefer?</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question4" value="2" checked>
+            I like Windows.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question4" value="1">
+            I like MacOS.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question4" value="0">
+            I dual-boot, or use Linux, I'm not an OS loyalist.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question4" value="0">
+            I only interact with electronics using plain binary.
+          </label>
+        </div>
+        <br></br>
+        <!--Question 5-->
+          <p>Would you prefer to work for a large company or a smaller one?</p>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question5" value="2" checked>
+            Large company.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question5" value="0">
+            No preference.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question5" value="1">
+            Small company.
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="question5" value="0">
+            I want to freelance/work for myself.
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Done!</button>
+      </form>
+      <div id="trackSuggestion">
+        <h1>We recommend <span id="track"></span>!</h1>
+        <h2>Good luck in whatever your next step is, <span id="nameOut"></span>!</h2>
+      </div>
+      <div>
+        <img id="ruby" src="img/ruby.png" alt="The Ruby Logo">
+        <img id="java" src="img/java.png" alt="The Java Logo">
+        <img id="csharp" src="img/csharp.png" alt="The C# Logo">
+        <img id="design" src="img/design.png" alt="The Design Logo">
+        <img id="php" src="img/php.png" alt="The PHP Logo">
+      </div>
+      <button type="submit" id="showMe" class="btn btn-secondary" onclick="showAll(this)">Just show me all the tracks.</button>
+      <script>
+      function showAll("#showMe") {
+        $("img#ruby.png").show;
+        $("img#java.png").show;
+        $("img#csharp.png").show;
+        $("img#design.png").show;
+        $("img#php.png").show;
+      }
+      </script>
+    </div>
+  </body>
+</html>

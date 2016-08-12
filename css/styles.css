@@ -1,0 +1,15 @@
+html {
+  background-image: url=("img/background.jpg") no-repeat center center-fixed;
+}
+
+form {
+  width: 50%;
+}
+
+img {
+  display:none;
+}
+
+#trackSuggestion{
+  display:none;
+}
