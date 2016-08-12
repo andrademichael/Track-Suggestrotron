@@ -91,7 +91,7 @@ $(document).ready(function() {
         $("img#php").show();
       }
       else {
-        $("#track").text("We're not sure, sorry!")
+        $("#track").text("... well, we're not sure, sorry! The test is still under development and we wouldn't want to give bad advice.")
         $("img#lost").show();
       }
     }

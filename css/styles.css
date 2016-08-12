@@ -1,9 +1,6 @@
-html {
-  background-image: url=("img/background.jpg") no-repeat center center-fixed;
-}
-
 form {
   width: 50%;
+  text-align: left;
 }
 
 img {
@@ -12,4 +9,14 @@ img {
 
 #trackSuggestion{
   display:none;
+}
+
+h1 {
+  text-align: center;
+  margin:auto;
+  padding-top: 5%;
+}
+
+.container {
+  margin:auto;
 }
