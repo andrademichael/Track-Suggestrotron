@@ -1,8 +1,20 @@
 $(document).ready(function() {
+
+
+  //Backend
+      function showAll() {
+        $("#ruby").show;
+        $("#java").show;
+        $("#csharp").show;
+        $("#design").show;
+        $("#php").show;  
+        $("#lost").show;
+      };
+//Frontend
+  $('#showMe').on('click', showAll());
   $("form").submit(function(event) {
     $("div").removeClass("has-error");
     event.preventDefault();
-//Frontend
     var name = $("#nameInput").val();
     var ruby = 0;
     var java = 0;
