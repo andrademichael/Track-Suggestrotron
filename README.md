@@ -6,7 +6,9 @@
 
 ## Description
 
-The Track Suggestotron is a mutliple-choice quiz that asks the user their personal preferences about work tasks. It returns a suggestion of which course track at Epicodus they might prefer based on those answers.
+The Track Suggestotron is a multiple-choice quiz that asks the user their personal preferences about work tasks. It returns a suggestion of which course track at Epicodus they might prefer based on those answers.
+
+This page is live at https://andrademichael.github.io/Track-Suggestrotron/
 
 ## Setup/Installation Requirements
 
